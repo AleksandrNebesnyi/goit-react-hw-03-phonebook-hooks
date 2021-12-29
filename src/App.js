@@ -39,8 +39,8 @@ useEffect(() => {
 
     
     // Проверка на дубликат
-    const duplicateName = contacts.find(
-      contact => contact.name === newContact.name,
+    const duplicateName = contacts.sort(
+      contact => contact.name.toLowerCase() === newContact.name.toLowerCase(),
     );
 
     if (duplicateName) {
