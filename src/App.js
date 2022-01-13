@@ -23,7 +23,7 @@ const App = () => {
   // Добавляет контакт
   const addContact = newContact => {
     // Проверка на дубликат
-    const duplicateName = contacts.sort(
+    const duplicateName = contacts.find(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase(),
     );
     if (duplicateName) {
